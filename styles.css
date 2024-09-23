@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(red, green, blue);
+    height: 100vh;
+}
+
+.container{
+    width: 500px;
+}
+
+button.btn-notification{
+    all: unset;
+    display: block;
+    color: white;
+    background-color: rgb(17, 17, 17);
+    border-radius: 7px;
+    padding: 15px 25px;     
+}
