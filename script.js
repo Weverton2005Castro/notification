@@ -4,7 +4,7 @@ function showNotification() {
             // Cria a notificação com o corpo e ícone definidos corretamente
             new Notification('Olá gente ', {
                 body: 'olá eu sou o rianzinho do grau 157',
-                image: 'imagedorian/rianzinhodograu157.png'
+                image: 'imagedorian/notfy.jpg'
             });
         }
     });
