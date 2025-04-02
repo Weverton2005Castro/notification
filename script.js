@@ -1,10 +1,10 @@
 function showNotification() {
     Notification.requestPermission().then(perm => {
         if (perm === 'granted') {
-            // Cria a notificação com o corpo e ícone definidos corretamente
-            new Notification('Olá gente ', {
-                body: 'olá eu sou o rianzinho do grau 157',
-                image: 'imagedorian/notfy.jpg'
+            
+            new Notification('Oi mary ', {
+                body: 'eu amo a maria duda',
+                image: 'imagedorian/imagem.png',
             });
         }
     });
