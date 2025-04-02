@@ -1,20 +1,24 @@
-if ('Notification' in window) {
-    document.addEventListener("DOMContentLoaded", () => {
-        let btnNotification = document.querySelector('.btn-notification');
+document.addEventListener("DOMContentLoaded", () => {
+    let btnNotification = document.querySelector('.btn-notification');
 
-        btnNotification.addEventListener("click", async () => {
+    btnNotification.addEventListener("click", async () => {
+        if (!("Notification" in window)) {
+            alert("Seu navegador não suporta notificações.");
+            return;
+        }
+
+        try {
             const perm = await Notification.requestPermission();
-            
+            console.log("Permissão da notificação:", perm);
+
             if (perm === 'granted') {
-                new Notification('Oi Mary ❤️', {
-                    body: 'Eu amo a Maria Duda!',
-                    icon: 'imagedorian/imagem.png' // Use um caminho absoluto e HTTPS
-                });
+                alert("Oi Mary ❤️\nEu amo a Maria Duda!");
             } else {
-                alert("Você precisa permitir notificações para receber os alertas.");
+                alert("Você precisa permitir notificações para ver este alerta.");
             }
-        });
+        } catch (error) {
+            alert("Erro ao solicitar notificação: " + error.message);
+            console.error("Erro:", error);
+        }
     });
-} else {
-    console.warn("Este navegador não suporta notificações.");
-}
+});
