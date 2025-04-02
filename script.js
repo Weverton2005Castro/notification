@@ -8,7 +8,7 @@ if ('Notification' in window) {
             if (perm === 'granted') {
                 new Notification('Oi Mary ❤️', {
                     body: 'Eu amo a Maria Duda!',
-                    icon: 'https://seusite.com/imagedorian/imagem.png' // Use um caminho absoluto e HTTPS
+                    icon: 'imagedorian/imagem.png' // Use um caminho absoluto e HTTPS
                 });
             } else {
                 alert("Você precisa permitir notificações para receber os alertas.");
