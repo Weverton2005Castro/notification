@@ -1,65 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notificação</title>
-    <style>
-        /* Estilo do modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-            text-align: center;
-            width: 300px;
-        }
-        .modal img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .modal button {
-            margin-top: 10px;
-            padding: 5px 10px;
-            border: none;
-            background: #ff4d4d;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <title>Página de Notificação</title>
 </head>
 <body>
-
-    <button class="btn-notification">Mostrar Notificação</button>
-
-    <div class="modal" id="customModal">
-        <h2>Oi Mary ❤️</h2>
-        <p>Eu amo a Maria Duda!</p>
-        <img src="imagedorian/imagem.png" alt="Imagem">
-        <button onclick="fecharModal()">Fechar</button>
+    <div class="container">
+        <button class="btn-notification">
+            Notificação
+        </button>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            let btnNotification = document.querySelector('.btn-notification');
-            let modal = document.getElementById("customModal");
-
-            btnNotification.addEventListener("click", () => {
-                modal.style.display = "block";
-            });
-        });
-
-        function fecharModal() {
-            document.getElementById("customModal").style.display = "none";
-        }
-    </script>
-
+    
 </body>
+<script src="script.js" >
+    
+</script>
 </html>
